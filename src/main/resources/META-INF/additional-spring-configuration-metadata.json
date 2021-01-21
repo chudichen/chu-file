@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "chu.file.preview.text.maxFileSizeMb",
+      "type": "java.lang.Long",
+      "description": "允许在线解析封面, 专辑, 歌手信息的音频文件大小, 单位为MB."
+  }
+] }

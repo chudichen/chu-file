@@ -14,9 +14,7 @@ import org.springframework.context.annotation.Configuration;
 public class ChuFileConstant {
 
     public static final String USER_HOME = System.getProperty("user.home");
-
     public static final Character PATH_SEPARATOR_CHAR = '/';
-
     public static final String PATH_SEPARATOR = "/";
 
     /**

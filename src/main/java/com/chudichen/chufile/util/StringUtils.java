@@ -1,5 +1,8 @@
 package com.chudichen.chufile.util;
 
+import cn.hutool.core.util.ObjectUtil;
+import com.chudichen.chufile.model.constant.ChuFileConstant;
+
 /**
  * 字符串工具类
  *
@@ -70,5 +73,38 @@ public class StringUtils {
         }
         sb.append(path.charAt(path.length() - 1));
         return sb.toString();
+    }
+
+    /**
+     * 判断字符串是否为空
+     *
+     * @param s 待判断字符串
+     * @return {@code true}为空
+     */
+    public static boolean isNullOrEmpty(String s) {
+        return s == null || "".equals(s);
+    }
+
+    /**
+     * 判断字符串是否为空
+     *
+     * @param s 待判断字符串
+     * @return {@code true}不为空
+     */
+    public static boolean isNotNullOrEmpty(String s) {
+        return !isNullOrEmpty(s);
+    }
+
+    /**
+     * 获取basePath + path的全路径地址
+     *
+     * @param basePath 基础路径
+     * @param path 路径
+     * @return 全路径
+     */
+    public static String getFullPath(String basePath, String path) {
+        basePath = ObjectUtil.defaultIfNull(basePath, "");
+        path = ObjectUtil.defaultIfNull(path, "");
+        return removeDuplicateSeparator(basePath + ChuFileConstant.PATH_SEPARATOR + path);
     }
 }

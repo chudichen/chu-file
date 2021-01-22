@@ -17,5 +17,4 @@ public class ChuFileApplication {
         SpringApplication.run(ChuFileApplication.class, args);
         System.out.println(ChuFileConstant.AUDIO_MAX_FILE_SIZE_MB);
     }
-
 }

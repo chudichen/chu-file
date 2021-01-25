@@ -1,0 +1,37 @@
+spring:
+  h2:
+    console:
+      settings:
+        web-allow-others: true
+      path: /h2-console
+      enabled: false
+  datasource:
+    # 初始化数据导入
+    data: classpath*:db/data.sql
+    sql-script-encoding: utf-8
+
+    initialization-mode: always
+    continue-on-error: true
+
+    # h2 内存数据库 配置
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:${chu.file.db.path}
+    username: root
+    password: root
+  jackson:
+    date-format: yyyy-MM-dd HH:mm
+    time-zone: GMT+8
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: false
+    show-sql: false
+
+chu:
+  file:
+    db:
+      path: ${user.home}/.chu_file/db/chu_file

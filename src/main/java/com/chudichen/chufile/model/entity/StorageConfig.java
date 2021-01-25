@@ -1,4 +1,4 @@
-package com.chudichen.chufile.entity;
+package com.chudichen.chufile.model.entity;
 
 import com.chudichen.chufile.model.enums.StorageStrategyEnum;
 import lombok.Data;
@@ -27,7 +27,7 @@ public class StorageConfig {
     @Lob
     private String value;
 
-    private Integer driverId;
+    private Integer driveId;
 
     public StorageConfig(String key, String title) {
         this.key = key;

@@ -1,6 +1,6 @@
 package com.chudichen.chufile.repository;
 
-import com.chudichen.chufile.entity.FilterConfig;
+import com.chudichen.chufile.model.entity.FilterConfig;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.chudichen.chufile.entity;
+package com.chudichen.chufile.model.entity;
 
 import lombok.Data;
 

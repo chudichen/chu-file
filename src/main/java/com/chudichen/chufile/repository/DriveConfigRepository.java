@@ -1,6 +1,6 @@
 package com.chudichen.chufile.repository;
 
-import com.chudichen.chufile.entity.DriveConfig;
+import com.chudichen.chufile.model.entity.DriveConfig;
 import com.chudichen.chufile.model.enums.StorageStrategyEnum;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -16,7 +16,7 @@ import java.util.List;
  * @date 2021-01-22
  */
 @Repository
-public interface DriverConfigRepository extends JpaRepository<DriveConfig, Integer> {
+public interface DriveConfigRepository extends JpaRepository<DriveConfig, Integer> {
 
     /**
      * 根据存储策略获取所有的驱动器
@@ -34,5 +34,5 @@ public interface DriverConfigRepository extends JpaRepository<DriveConfig, Integ
      */
     @Modifying
     @Query("update DRIVER_CONFIG set orderNum = :orderNum where id = :id")
-    void updateSetOrOrderNumOrderById(Integer orderNum, Integer id);
+    void updateSetOrderNumById(Integer orderNum, Integer id);
 }

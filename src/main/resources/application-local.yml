@@ -30,10 +30,8 @@ spring:
       hibernate:
         format_sql: false
     show-sql: false
-  # 热部署配置
-  devtools:
-    restart:
-      enabled: true
+
+chu:
   file:
     db:
       path: ${user.home}/.chu_file/db/chu_file

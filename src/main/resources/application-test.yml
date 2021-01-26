@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    # 初始化数据导入
+    data: classpath*:db/data.sql
+    sql-script-encoding: utf-8
+
+    initialization-mode: always
+    continue-on-error: true
+
+    # mysql配置
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/chu_file?characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: root
+  jackson:
+    date-format: yyyy-MM-dd HH:mm
+    time-zone: GMT+8
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        hbm2ddl:
+          import_files: data.sql
+    show-sql: true

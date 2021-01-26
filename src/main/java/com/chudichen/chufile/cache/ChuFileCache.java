@@ -132,6 +132,15 @@ public class ChuFileCache {
     }
 
     /**
+     * 更新缓存中的系统设置
+     *
+     * @param systemConfigCache 系统设置
+     */
+    public void updateConfig(SystemConfigDTO systemConfigCache) {
+        this.systemConfigCache = systemConfigCache;
+    }
+
+    /**
      * 获取哦所有缓存key（文件夹名称）
      *
      * @param driveId 驱动器id
@@ -228,7 +237,6 @@ public class ChuFileCache {
             driveCache.cancelPruneSchedule();
         }
     }
-
 
     /**
      * 获取指定驱动器对应的缓存

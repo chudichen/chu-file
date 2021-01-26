@@ -46,6 +46,4 @@ public class StorageStrategyContext implements ApplicationContextAware {
                 .filter(fileService -> fileService.getStorageStrategyEnum() == strategy)
                 .findAny().orElse(null);
     }
-
-
 }

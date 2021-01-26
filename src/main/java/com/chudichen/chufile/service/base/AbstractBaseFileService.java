@@ -25,7 +25,7 @@ public abstract class AbstractBaseFileService implements BaseFileService {
     /**
      * 下载链接过期时间，目前只在兼容S3协议的存储策略中使用到
      */
-    @Value("${chu.file.cache.timeout}")
+    @Value("${chu.file.cache.timeout:10}")
     protected Long timeout;
 
     /**

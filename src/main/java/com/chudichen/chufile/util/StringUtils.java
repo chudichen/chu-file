@@ -58,13 +58,14 @@ public class StringUtils {
         }
 
         StringBuilder sb = new StringBuilder();
-        if (path.indexOf(HTTP_PROTOCOL) == 0) {
-            sb.append(HTTP_PROTOCOL);
-        } else if (path.indexOf(HTTPS_PROTOCOL) == 0) {
-            sb.append(HTTPS_PROTOCOL);
+
+        if (path.indexOf(HTTP_PROTOCAL) == 0) {
+            sb.append(HTTP_PROTOCAL);
+        } else if (path.indexOf(HTTPS_PROTOCAL) == 0) {
+            sb.append(HTTPS_PROTOCAL);
         }
 
-        for (int i = 0; i < path.length() - 1; i++) {
+        for (int i = sb.length(); i < path.length() - 1; i++) {
             char current = path.charAt(i);
             char next = path.charAt(i + 1);
             if (!(current == DELIMITER && next == DELIMITER)) {

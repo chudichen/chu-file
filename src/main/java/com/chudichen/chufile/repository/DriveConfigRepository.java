@@ -21,10 +21,10 @@ public interface DriveConfigRepository extends JpaRepository<DriveConfig, Intege
     /**
      * 根据存储策略获取所有的驱动器
      *
-     * @param strategy 存储类型
+     * @param type 存储类型
      * @return 指定类型的存储驱动器
      */
-    List<DriveConfig> findByStrategy(StorageStrategyEnum strategy);
+    List<DriveConfig> findByType(StorageStrategyEnum type);
 
     /**
      * 更新指定id的订单数量

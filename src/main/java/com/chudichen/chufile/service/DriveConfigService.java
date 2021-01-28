@@ -125,7 +125,7 @@ public class DriveConfigService {
      * @return 驱动器对应的存储策略
      */
     public StorageStrategyEnum findStorageTypeById(Integer id) {
-        return driveConfigRepository.findById(id).map(DriveConfig::getStrategy).orElse(null);
+        return driveConfigRepository.findById(id).map(DriveConfig::getType).orElse(null);
     }
 
     /**
@@ -147,7 +147,7 @@ public class DriveConfigService {
     public void saveDriveConfigDTO(DriveConfigDTO driveConfigDTO) {
         // 保存基本信息
         DriveConfig driveConfig = new DriveConfig();
-        StorageStrategyEnum strategy = driveConfigDTO.getStrategy();
+        StorageStrategyEnum strategy = driveConfigDTO.getType();
         BeanUtils.copyProperties(driveConfigDTO, driveConfig);
         driveConfigRepository.save(driveConfig);
 
@@ -224,7 +224,7 @@ public class DriveConfigService {
      * @return 指定存储类型的驱动器
      */
     public List<DriveConfig> findByStrategy(StorageStrategyEnum strategy) {
-        return driveConfigRepository.findByStrategy(strategy);
+        return driveConfigRepository.findByType(strategy);
     }
 
     /**

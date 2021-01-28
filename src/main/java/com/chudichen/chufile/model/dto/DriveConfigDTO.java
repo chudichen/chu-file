@@ -16,7 +16,7 @@ public class DriveConfigDTO {
     private String name;
 
     @JsonDeserialize(using = StorageStrategyEnumJsonDeserializerConvert.class)
-    private StorageStrategyEnum strategy;
+    private StorageStrategyEnum type;
 
     private Boolean enable;
 

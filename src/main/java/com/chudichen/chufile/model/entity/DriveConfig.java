@@ -28,7 +28,7 @@ public class DriveConfig {
 
     private Boolean autoRefreshCache;
 
-    private StorageStrategyEnum strategy;
+    private StorageStrategyEnum type;
 
     private Boolean searchEnable;
 
